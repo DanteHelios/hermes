@@ -1,0 +1,175 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierre
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Commands
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Enrique Perezalonso} \\ \vspace{1pt}
+    \small (305)-546-9205 $|$ \href{mailto:epereza@umich.edu}{\underline{epereza@umich.edu}} $|$
+    \href{https://www.linkedin.com/in/enrique-perezalonso}{\underline{linkedin.com/in/enrique-perezalonso}} $|$
+    \href{https://github.com/Eperezalonso}{\underline{https://github.com/Eperezalonso}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Michigan}{Ann Arbor, MI}
+      {Bachelor of Science in Computer Science, Minor in Math}{May 2027}
+      \resumeItemListStart
+        \resumeItem{Awards: Dean's Honor List Winter 2024, Fall 2024, Winter 2025 \quad GPA: 3.5/4}
+        \resumeItem{Activities: Alpha Kappa Psi, ALPFA, Society of Hispanic Professional Engineers, V1}
+        \resumeItem{Relevant Courses: Discrete Mathematics, Statistics, Data Structures and Algorithms, Computer Architecture}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Tech Developer Intern}{NYC / Remote}
+      {Sponsors for Educational Opportunity}{May 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Completed 300+ hours of software engineering training focused on data structures and full stack development}
+        \resumeItem{Worked in Scrum-like teams to design, test, and implement a full-stack award-winning application using Python (Flask), MySQL, HTML, JavaScript, CSS, and multiple API integrations, then presented app to over 150 people}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer Intern}{Miami, FL}
+      {Palla (YC S21)}{June 2024 -- August 2024}
+      \resumeItemListStart
+\resumeItem{Integrated GPT-3.5 Turbo into Zendesk via REST API for AI-powered ticket tagging and macro-based responses, increasing daily ticket throughput from 180 to 400 and improving response consistency}
+\resumeItem{Built Python script to automate financial spreadsheet processing -- time conversion, currency standardization, and bank-based splitting -- saving CFO 3+ hours per week}
+
+
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{Hermes -- AI Sales Agent} $|$ \emph{Python, FastAPI, Next.js, React, TypeScript, PostgreSQL, Gemini}}{Mar 2025 -- Present}
+        \resumeItemListStart
+          \resumeItem{Built an autonomous B2B sales agent that discovers leads via Google Places, enriches them through Gemini 2.5 with a hallucination guard verifying extracted emails against source text, and drafts personalized cold emails via a 5-tier hook system}
+          \resumeItem{Designed multi-channel outreach across email and LinkedIn with auto-followup scheduling, reply detection, unsubscribe handling, and Calendly webhook integration}
+          \resumeItem{Developed a genetic algorithm budget optimizer modeling enrichment as a 0/1 knapsack problem, and a lead scorer using logistic regression and decision trees to prioritize high-probability leads}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{FlyerStudio.AI} $|$ \emph{Next.js, React, TypeScript, Supabase, FAL.ai, Gemini, Stripe}}{Feb 2026 -- Present}
+        \resumeItemListStart
+          \resumeItem{Architected a SaaS platform for AI event poster generation, routing requests across 8+ distinct pipelines using input-signature detection to select the optimal model workflow based on user-provided assets}
+          \resumeItem{Engineered atomic concurrent generation with PostgreSQL row-level locking and stored procedures, enforcing per-user caps with stale job self-healing and race-condition-safe slot reservation}
+          \resumeItem{Built credit-based billing with Stripe, featuring atomic credit deduction via PostgreSQL RPCs, partial refunds on variant failures, and an immutable transaction ledger}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{Movi} $|$ \emph{Python, Flask, SQLite, REST API, JavaScript, Jinja2}}{July 2025}
+        \resumeItemListStart
+          \resumeItem{Engineered full-stack movie rating app winning SEO best project award; built AI chatbot with Gemini API using conversational memory, and a content-based recommendation engine with Scikit-learn cosine similarity}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, TypeScript, JavaScript, Java, C/C++, SQL, HTML/CSS} \quad
+     \textbf{Frameworks}{: Next.js, React, FastAPI, Flask, Tailwind CSS} \\
+     \textbf{Tools}{: Git, Supabase, PostgreSQL, Stripe, Vercel, VS Code, IntelliJ, Cursor} \quad
+     \textbf{Libraries}{: pandas, Matplotlib, Scikit-learn, Zustand, SWR} \\
+     \textbf{Programs}{: MongoDB NEXT in Tech Summit, Wayfair Early Leaders Program}
+    }}
+\end{itemize}
+
+%-----------LEADERSHIP & SOCIAL IMPACT-----------
+\section{Leadership \& Social Impact}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Muuk}{Miami, FL}
+    {Co-Founder}{July 2019 -- Present}
+    \resumeItemListStart
+\resumeItem{Co-founded biomedical startup producing \$200 chemo cold caps (vs. \$900/session) reducing hair loss by 60\%+; raised \$5K to prototype, \textbf{filed patent} for self-contained cooling system, launched website attracting 3,000 visitors}
+
+
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+
+
+\end{document}
